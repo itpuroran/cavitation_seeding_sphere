@@ -1,4 +1,4 @@
-still_sep _
-num_neighbors _
-num_cells _
+still_sep 1
+num_neighbors 7
+num_cells 100
 

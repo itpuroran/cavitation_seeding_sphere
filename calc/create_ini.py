@@ -23,6 +23,7 @@ if not os.path.exists('logs'):
 
 if not os.path.exists('ptu'):
         os.makedirs('ptu');
+
 if not os.path.exists('dumps_end'):
         os.makedirs('dumps_end');
 
@@ -69,7 +70,7 @@ def lammps_random_number(lammps_filename, nWalkers):
                     if not line.startswith('#'):
                         columns = line.split()
                         if len(columns) >= 1:
-                            line = line.replace(columns[1], 'dumps_twophase/dump_liquid_cluster_'+str(i)+'_'+str(j)+'.txt')  
+                            line = line.replace(columns[1], 'dumps_twophase/dump_liquid_cluster_r'+str(i)+'_c'+str(j)+'.txt')  
                             line = line + '\n'
                 if line.find('all_dump') != -1:
                     line = line.strip()

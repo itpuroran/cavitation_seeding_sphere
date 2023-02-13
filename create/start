@@ -1,0 +1,26 @@
+#!/bin/sh
+trap '' 0 1 2 9 15
+
+nrad=10
+ncopy=20
+for (( r=0; r < ${nrad}; r++ ))
+do
+	for (( c=0; c < ${ncopy}; c++ ))
+	do
+
+	inif0="create_cavity_files/create_cavity_sphere_repulse_r";
+	inif1="_c"
+
+	outf0="dumps_twophase/dump_liquid_cluster_r"
+	outf1="_c"
+	outf2=".txt"
+
+	in_file=${inif0}${r}${inif1}${c};
+	out_file=${outf0}${r}${outf1}${c}${outf2};
+
+	if ! [ -f "$out_file" ]; then
+	sbatch -n32 -t15 -i $in_file --wrap='srun lammps_16_03_2018';
+	echo "$i";
+	fi
+	done;
+done;

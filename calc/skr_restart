@@ -15,7 +15,7 @@ do
 	file=$a$i$d$j;
 	file2=$b$i$d$j$c
 	if ! [ -f "$file2" ]; then
-	sbatch -n8 -t40 -i $file --wrap='srun lammps_16_03_2018';
+	sbatch -n32 -t40 -i $file --wrap='srun lammps_16_03_2018';
 	echo "$i";
 	fi
 	done;

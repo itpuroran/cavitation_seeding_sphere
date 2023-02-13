@@ -1,5 +1,0 @@
-liquid_timestep 100000
-rad_start 11
-delta_rad 0.5
-rad_stop 15
-ncopy 50
