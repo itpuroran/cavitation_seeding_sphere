@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 g++ --std=c++11 -E analysis.cpp -o analysis.ii
 g++ --std=c++11 -S analysis.ii -o analysis.s

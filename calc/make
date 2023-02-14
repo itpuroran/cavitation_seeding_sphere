@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 g++ --std=c++11 -E calcV.cpp -o calcV.ii
 g++ --std=c++11 -S calcV.ii -o calcV.s
